@@ -13,7 +13,8 @@ async function drawLineChart() {
   // 2. Create chart dimensions
 
   let dimensions = {
-    width: window.innerWidth * 0.9,
+    // width: window.innerWidth * 0.9,
+    width:800,
     height: 400,
     margin: {
       top: 15,
@@ -146,7 +147,7 @@ async function drawLineChart() {
       + dimensions.margin.top
 
     tooltip.style("transform", `translate(`
-      + `calc( -50% + ${x}px),`
+      + `calc( -10% + ${x}px),`
       + `calc(-100% + ${y}px)`
       + `)`)
 

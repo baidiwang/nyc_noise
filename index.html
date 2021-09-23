@@ -18,8 +18,24 @@
 
 
 <body>
+
+
+    <div id="container">
+        <p>It is all known that NYC is a city that never sleeps. According to the noise complaint report from NYC 311,
+            the city is receiving usually thousand of noise complaints from NYC five boroughs every day. I collected
+            noise complaint data from NYC 311 website to make an interactive live chart above. The data ranges from
+            March 2020, the very beginning of the pandemic, until August 2021. The chart shows that there were more
+            complaints in summer and fewer in winter. However, before the vaccine rollout started earlier this year,
+            noise complaints in 2020 summer were much higher than complaints this summer.</p>
+
+        <p>I also made a Mapbox map below displaying the four loudest neighborhoods in NYC from 2019 to 2020. According
+            to a report issued by Rent Own Sell, the loudest neighborhoods were Brooklyn, Bronx, Manhattan and Queens.
+            Staten Island has the least amount of noise disruption-related reports lodged with 311.</p>
+
+    </div>
+
     <div id="container1">
-        <h2 id="header"></h2>
+        <h2 id="header">The noise issue in New York City</h2>
         <div id="wrapper" class="wrapper">
             <div id="tooltip" classf="tooltip">
                 <div class="tooltip-date">
@@ -219,26 +235,26 @@
                     progress: true
                 })
                 .onStepEnter(response => {
+                    console.log(response)
                     var chapter = config.chapters.find(chap => chap.id === response.element.id);
                     response.element.classList.add('active');
                     map[chapter.mapAnimation || 'flyTo'](chapter.location);
 
-                    if(response.direction=="down"&&response.index==1){
+
+
+
+                    if (response.direction == "down" && response.index == 1) {
                         let dom = document.getElementById("map");
-                        dom.style.position="fixed"
-                        dom.style.top="0px"
+                        dom.style.position = "fixed"
+                        dom.style.top = "0px"
                     }
-                    if(response.direction=="up"&&(response.index==0)){
+                    if (response.direction == "up" && (response.index == 0)) {
                         let dom = document.getElementById("map");
-                        dom.style.position="absolute"
-                        dom.style.top="800px"
+                        dom.style.position = "absolute"
+                        dom.style.top = "1200px"
                     }
 
 
-
-
-
-                    
                     if (config.showMarkers) {
                         marker.setLngLat(chapter.location.center);
                     }
