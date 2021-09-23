@@ -1,3 +1,4 @@
+
 async function drawLineChart() {
 
   // 1. Access data
