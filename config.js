@@ -31,8 +31,6 @@ var config = {
         }
       ]
     },
-
-
     
     {
       id: 'NYC',
@@ -41,11 +39,12 @@ var config = {
       image: '',
       description: 'NYC is regarded as a city that never sleeps, which is not really a bonus for anyone who is genuinely attempting to get some rest. If you are one of those fortunate people who can afford to stay in a sky-high luxury apartment, far from all the chaos of the streets, then you can thank your lucky stars. And for the typical New Yorker, who sometimes needs to surrender to personal space only to stay in a busy Manhattan neighborhood, noise may be a major put off. Acccroding to a report from Rent Own Sell, I made a map below showing the top four noisiest neighborhood in New York.',
       location: {
-        center: [-73.98059, 40.74527],
-        zoom: 11.5101,
-        pitch: 60.0000,
-        bearing: 20.0000
+        center: [-73.91845, 40.73505],
+        zoom: 9.9905,
+        pitch: 45.0000,
+        bearing: 0.0000
       },
+      
       onChapterEnter: [
         {
           layer: 'NYC',

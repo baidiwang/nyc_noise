@@ -3,7 +3,7 @@ async function drawLineChart() {
 
   // 1. Access data
 
-  let ds = await d3.json("./../../../noise_complaints.json")
+  let ds = await d3.json("./noise_complaints.json")
   var dataset = ds[0]
 
   const yAccessor = d => d.total
@@ -15,7 +15,7 @@ async function drawLineChart() {
 
   let dimensions = {
     // width: window.innerWidth * 0.9,
-    width:800,
+    width: 800,
     height: 400,
     margin: {
       top: 15,
